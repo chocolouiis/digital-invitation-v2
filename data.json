@@ -18,5 +18,13 @@
         "PHNXT05": {
         "name": "Barry",
         "gender": "female"
-    }
+    },
+        "PHNXT01": {
+        "name": "Addam",
+        "gender": "male"
+    },
+        "PHNXT01": {
+        "name": "နှင်းဖူး",
+        "gender": "female"
+    },
 }
