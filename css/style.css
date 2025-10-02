@@ -1,0 +1,259 @@
+/* ================================= */
+/* ==== Custom Font Definitions ==== */
+/* ================================= */
+@font-face {
+    font-family: 'Gandgaw';
+    src: url('../assets/fonts/gandgaw.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MyanmarHeadOne';
+    src: url('../assets/fonts/MyanmarHeadOne.ttf') format('truetype');
+}
+
+
+/* ================== */
+/* ==== Base Styles === */
+/* ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Default font ကို Gandgaw သတ်မှတ် */
+    font-family: 'Gandgaw', sans-serif;
+    background: url('../assets/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+
+/* ====================== */
+/* ==== Page Management === */
+/* ====================== */
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1; /* Content pages should be above background effects */
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ================== */
+/* ==== Font Classes === */
+/* ================== */
+.eng-text {
+    /* English text အတွက် Gandgaw font ကိုသုံး */
+    font-family: 'Gandgaw', Arial, sans-serif;
+}
+
+.mm-text-title {
+    /* ခေါင်းစဉ်ကြီးအတွက် MyanmarHeadOne font ကိုသုံး */
+    font-family: 'MyanmarHeadOne', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #f1d43f;
+}
+
+.mm-text-general {
+    /* စာကိုယ်ယေဘုယျအတွက် Gandgaw font ကိုသုံး */
+    font-family: 'Gandgaw', sans-serif;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#greeting {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ================== */
+/* ==== Page Layouts === */
+/* ================== */
+
+/* Loading Page */
+.loading-container {
+    text-align: center;
+}
+
+.loading-moon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.loading-text {
+    font-size: 14px;
+    color: #ffffff80;
+}
+
+/* Code Page */
+.code-container {
+    text-align: center;
+}
+
+.half-moon {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    background: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+#codeInput {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#submitCode {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    background: #4a91e288;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#submitCode:hover {
+    background: #357abd;
+}
+
+/* Invitation Page */
+.invitation-container {
+    max-width: 100%;
+    text-align: center;
+}
+
+.full-moon {
+    width: 200px;
+    height: 200px;
+    margin-top: -40%;
+}
+
+.invitation-content {
+    padding: 0 20px;
+    margin-bottom: -20px;
+}
+
+.invitation-content p {
+    margin: 10px 0;
+}
+
+.event-details {
+    font-size: 10px;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: -60%;
+}
+
+.event-details p {
+    margin: 5px 0px;
+}
+
+.footer-image {
+    max-width: 120%;
+    margin-left: -40px;
+}
+
+
+/* ========================= */
+/* ==== Background Effects === */
+/* ========================= */
+
+/* Star Animation */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 1s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Fireworks Animation */
+#fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+
+/* ================================ */
+/* ==== Element Entrance Animations === */
+/* ================================ */
+
+/* Initial state for animating elements */
+.animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Initial state for the zoom animation */
+.animate-zoom {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Final visible state, triggered by JS */
+.animate-item.is-visible,
+.animate-zoom.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}

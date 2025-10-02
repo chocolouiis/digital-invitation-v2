@@ -1,0 +1,22 @@
+{
+    "PHNXT01": {
+        "name": "ဦးမြင့်အောင်",
+        "gender": "male"
+    },
+    "PHNXT02": {
+        "name": "ဒေါ်ခင်ဦး",
+        "gender": "female"
+    },
+    "PHNXT03": {
+        "name": "Tina",
+        "gender": "female"
+    },
+    "PHNXT04": {
+        "name": "Athanasia",
+        "gender": "female"
+    },
+        "PHNXT05": {
+        "name": "Barry",
+        "gender": "female"
+    }
+}

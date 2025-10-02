@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Invitation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="fireworks-container"></div>
+    <section id="loading-page" class="page active">
+        <div class="loading-container">
+            <img src="assets/gifs/loading-moon.gif" alt="Loading" class="loading-moon">
+            <p class="eng-text loading-text">loading...</p>
+        </div>
+    </section>
+
+    <section id="code-page" class="page">
+        <div class="code-container">
+            <img src="assets/gifs/half-moon.gif" alt="Half Moon" class="half-moon">
+            <div class="input-box">
+                <input type="text" id="codeInput" placeholder="Type the code..." class="eng-text">
+                <button id="submitCode" class="eng-text">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="invitation-page" class="page">
+        <div class="invitation-container">
+            <img src="assets/images/full-moon.png" alt="Full Moon" class="full-moon animate-zoom">
+            <h1 class="mm-text-title animate-item">အာစရိယပူဇော်ပွဲ ဖိတ်ကြားလွှာ</h1>
+            <p id="greeting" class="mm-text-general animate-item"></p>
+            <div class="invitation-content mm-text-general">
+                <p class="animate-item">အသိပညာ၏ အလင်းရောင်ဖြင့် ကျွန်ုပ်တို့၏ ဘဝခရီးလမ်းကို ထွန်းလင်းပေးခဲ့သော ဆရာ၊ ဆရာမများ၏ မေတ္တာ၊ ကရုဏာနှင့် ပညာပေးဆပ်မှုများသည် တိုင်းတာ၍မရနိုင်သော ဂုဏ်ကျေးဇူးများဖြစ်ပါသည်။</p>
+                <p class="animate-item">ဤကဲ့သို့ ကြီးမြတ်လှသော ဆရာ၊မတို့၏ ဂုဏ်ကျေးဇူးကို အောက်မေ့ကျေးဇူးဆပ်သောအားဖြင့် ဖီးနစ်နွေးဦးအထက်တန်းကျောင်းမှ တပည့်သားသမီးများသည် သီတင်းကျွတ်အခါသမယနှင့်အတူ အာစရိယပူဇော်ပွဲလေးတစ်ခုကို ကျင်းပပြုလုပ်ရန် စီစဉ်ထားရှိပါသည်။</p>
+                <p class="animate-item">ထိုပူဇော်ပွဲသို့ ဆရာ၊ ဆရာမများမှ အချိန်ပေး၍ ကြွရောက်ချီးမြှင့်ပါရန် လေးစားစွာ ဖိတ်ကြားအပ်ပါသည်။ ဆရာ၊မတို့၏ တန်ဖိုးရှိလှသော ပညာအမွေသည်သာ ကျွန်တော်တို့၏ ဘဝခရီးအတွက် အခိုင်မာဆုံးအုတ်မြစ် ဖြစ်ပါကြောင်း အလေးအနက်ထား ပြောကြားအပ်ပါသည်။</p>
+            </div>
+            <div class="event-details eng-text animate-item">
+                <p>ရက်စွဲ - <span>04/10/2025</span></p>
+                <p>အချိန် - <span>00:00</span></p>
+                <p>ID - <span>XXX XXX XXX</span></p>
+                <p>Passcode - <span>1234</span></p>
+            </div>
+            <img src="assets/images/footage.png" alt="Footer" class="footer-image animate-item">
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
